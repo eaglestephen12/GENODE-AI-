@@ -1,0 +1,159 @@
+{
+  "n_genomes": 900,
+  "genera": [
+    "Escherichia",
+    "Klebsiella",
+    "Mycobacterium",
+    "Pseudomonas",
+    "Salmonella",
+    "Staphylococcus"
+  ],
+  "n_clusters": 76,
+  "n_splits": 2,
+  "chance": 0.16666666666666666,
+  "results": {
+    "majority | cluster-split (honest)": {
+      "macro_f1": 0.0022228396776882466,
+      "balanced_acc": 0.0044444444444444444,
+      "fold_f1_mean": 0.0014756485344720638,
+      "fold_f1_sd": 3.2647091470620914e-05
+    },
+    "logreg | cluster-split (honest)": {
+      "macro_f1": 0.3654806363206173,
+      "balanced_acc": 0.3922222222222222,
+      "fold_f1_mean": 0.4032911056330567,
+      "fold_f1_sd": 0.05064890174137368
+    },
+    "random_forest | cluster-split (honest)": {
+      "macro_f1": 0.4281336337741573,
+      "balanced_acc": 0.4666666666666666,
+      "fold_f1_mean": 0.3144602534348721,
+      "fold_f1_sd": 0.07290466390543206
+    },
+    "random_forest | random split (leaky)": {
+      "macro_f1": 0.8999322839819136,
+      "balanced_acc": 0.898888888888889,
+      "fold_f1_mean": 0.8998540185449209,
+      "fold_f1_sd": 0.0031653560180779357
+    },
+    "random_forest | shuffled labels (control)": {
+      "macro_f1": 0.15636405611161705,
+      "balanced_acc": 0.17666666666666667,
+      "fold_f1_mean": 0.12372219299383028,
+      "fold_f1_sd": 0.019636457007889623
+    }
+  },
+  "per_genus_rf_honest": {
+    "Escherichia": {
+      "precision": 0.3394495412844037,
+      "recall": 0.49333333333333335,
+      "f1-score": 0.40217391304347827,
+      "support": 150.0
+    },
+    "Klebsiella": {
+      "precision": 0.2975206611570248,
+      "recall": 0.24,
+      "f1-score": 0.2656826568265683,
+      "support": 150.0
+    },
+    "Mycobacterium": {
+      "precision": 1.0,
+      "recall": 0.1,
+      "f1-score": 0.18181818181818182,
+      "support": 150.0
+    },
+    "Pseudomonas": {
+      "precision": 0.41134751773049644,
+      "recall": 0.7733333333333333,
+      "f1-score": 0.5370370370370371,
+      "support": 150.0
+    },
+    "Salmonella": {
+      "precision": 0.42045454545454547,
+      "recall": 0.24666666666666667,
+      "f1-score": 0.31092436974789917,
+      "support": 150.0
+    },
+    "Staphylococcus": {
+      "precision": 0.8068181818181818,
+      "recall": 0.9466666666666667,
+      "f1-score": 0.8711656441717791,
+      "support": 150.0
+    },
+    "accuracy": 0.4666666666666667,
+    "macro avg": {
+      "precision": 0.5459317412407754,
+      "recall": 0.4666666666666666,
+      "f1-score": 0.4281336337741573,
+      "support": 900.0
+    },
+    "weighted avg": {
+      "precision": 0.5459317412407754,
+      "recall": 0.4666666666666667,
+      "f1-score": 0.4281336337741573,
+      "support": 900.0
+    }
+  },
+  "top_features": [
+    [
+      "GCTG",
+      0.02383474517141809
+    ],
+    [
+      "CTAT",
+      0.020411800641123655
+    ],
+    [
+      "TTAA",
+      0.019768897691127506
+    ],
+    [
+      "TATA",
+      0.01969535462961742
+    ],
+    [
+      "ATAG",
+      0.018750346026549576
+    ],
+    [
+      "CAGC",
+      0.016912971123190807
+    ],
+    [
+      "ACCG",
+      0.014465724325308623
+    ],
+    [
+      "ATAA",
+      0.01438332785519957
+    ],
+    [
+      "TTAT",
+      0.013707166766389153
+    ],
+    [
+      "TTTA",
+      0.013514318624352366
+    ],
+    [
+      "CGGT",
+      0.013466654227967926
+    ],
+    [
+      "CTTT",
+      0.013001584297537734
+    ],
+    [
+      "CCCA",
+      0.012534327897004366
+    ],
+    [
+      "CCAG",
+      0.012316309727369787
+    ],
+    [
+      "TAAA",
+      0.01217715324866928
+    ]
+  ]
+}
