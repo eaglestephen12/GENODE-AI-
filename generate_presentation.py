@@ -260,6 +260,6 @@ for idx, text in enumerate([
     p.alignment = PP_ALIGN.LEFT
     p.space_after = Pt(12)
 
-output_path = ROOT / "GENEODE_Phage_Presentation.pptx"
+output_path = ROOT / "GENEODE_Phage_Presentation_Refined.pptx"
 prs.save(str(output_path))
 print(f"Saved polished presentation to: {output_path}")
