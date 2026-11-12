@@ -1,0 +1,25 @@
+=== GENEODE phage helper: NC_001604.1 ===
+
+SOFT CHECKS
+  length            39,937 bp
+  GC content        48.4%   (typical for Escherichia phages: 43.5% +/- 5.9%, z = +0.8)
+  ambiguous bases   0.00%
+  coding-like       81% of sequence in long ORFs
+
+HOST PREDICTION (resolution: host GENUS, not strain)
+  Escherichia      68.8%
+  Salmonella       14.6%
+  Klebsiella       13.6%
+  Confidence band 0.6-0.8: in honest cross-validation, predictions in this band were correct 88% of the time (n=158).
+  Novelty: Has a relative in the training set (PV223880.1, Escherichia, similarity 0.90). Honest validation applies at the default level (macro-F1 ~0.63).
+  NOTE: Top two candidates are both Enterobacteriaceae (Escherichia/Klebsiella/Salmonella). This is the model's known weak spot; treat the host as 'Enterobacteriaceae, genus unresolved' until tested.
+
+SUGGESTED NEXT STEPS (rule-based guidance, not a model prediction)
+  1. Search for a known relative: BLASTn against NCBI Virus / INPHARED. If a close hit has a recorded host, that evidence outranks this model.
+  2. Annotate the genome (e.g. Pharokka, which uses PHANOTATE; tRNAscan-SE for tRNAs) and check completeness (CheckV).
+  3. Predict lifestyle (e.g. BACPHLIP) and screen for integrase/repressor genes, toxins, virulence and antibiotic-resistance genes (e.g. ABRicate with VFDB/CARD, or AMRFinderPlus). Temperate phages or phages carrying such genes are generally unsuitable for therapy.
+  4. Place it taxonomically (e.g. VIRIDIC, vConTACT) to see which known phage group it belongs to. Strain-level identity needs reference-based comparison; this model does not give it.
+  5. Confirm the host in the lab: spot assay / efficiency of plating on a panel of Escherichia strains.
+  6. Only if the goal is to express or clone a gene or region (e.g. an endolysin or a receptor-binding protein): pick it from the annotation, compare its codon usage/GC with the expression host (this genome is 48.4% GC), design primers, and choose a vector accordingly. Cloning a whole phage genome into a plasmid is not routine; genome engineering uses different workflows (e.g. yeast-based or cell-free rebooting).
+
+Decision support only: validate in the lab and with expert review before acting.

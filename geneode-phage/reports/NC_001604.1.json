@@ -1,0 +1,54 @@
+{
+  "name": "NC_001604.1",
+  "checks": {
+    "length": 39937,
+    "gc": 0.48398727996594637,
+    "ambiguous_fraction": 0.0,
+    "coding_fraction": 0.8103513033027018
+  },
+  "ranking": [
+    [
+      "Escherichia",
+      0.688
+    ],
+    [
+      "Salmonella",
+      0.146
+    ],
+    [
+      "Klebsiella",
+      0.136
+    ]
+  ],
+  "top": "Escherichia",
+  "confidence": 0.688,
+  "band": {
+    "lo": 0.6,
+    "hi": 0.8,
+    "n": 158,
+    "accuracy": 0.879746835443038
+  },
+  "gc_z": 0.8294472880836018,
+  "gc_host": [
+    0.4353163979167817,
+    0.05867869212233653
+  ],
+  "nearest": {
+    "id": "PV223880.1",
+    "genus": "Escherichia",
+    "similarity": 0.8995
+  },
+  "novelty": "Has a relative in the training set (PV223880.1, Escherichia, similarity 0.90). Honest validation applies at the default level (macro-F1 ~0.63).",
+  "warnings": [],
+  "notes": [
+    "Top two candidates are both Enterobacteriaceae (Escherichia/Klebsiella/Salmonella). This is the model's known weak spot; treat the host as 'Enterobacteriaceae, genus unresolved' until tested."
+  ],
+  "steps": [
+    "Search for a known relative: BLASTn against NCBI Virus / INPHARED. If a close hit has a recorded host, that evidence outranks this model.",
+    "Annotate the genome (e.g. Pharokka, which uses PHANOTATE; tRNAscan-SE for tRNAs) and check completeness (CheckV).",
+    "Predict lifestyle (e.g. BACPHLIP) and screen for integrase/repressor genes, toxins, virulence and antibiotic-resistance genes (e.g. ABRicate with VFDB/CARD, or AMRFinderPlus). Temperate phages or phages carrying such genes are generally unsuitable for therapy.",
+    "Place it taxonomically (e.g. VIRIDIC, vConTACT) to see which known phage group it belongs to. Strain-level identity needs reference-based comparison; this model does not give it.",
+    "Confirm the host in the lab: spot assay / efficiency of plating on a panel of Escherichia strains.",
+    "Only if the goal is to express or clone a gene or region (e.g. an endolysin or a receptor-binding protein): pick it from the annotation, compare its codon usage/GC with the expression host (this genome is 48.4% GC), design primers, and choose a vector accordingly. Cloning a whole phage genome into a plasmid is not routine; genome engineering uses different workflows (e.g. yeast-based or cell-free rebooting)."
+  ]
+}
